@@ -5,6 +5,7 @@
 
 ## 方法概述
 根据分析载体的不同，情感分析会涉及很多主题，包括针对电影评论，商品评价，新闻和博客等的情感分析。在情感分析领域，文本识别可以划分为积极和消极两类，或者积极，消极和中性等，分析的主要方法有  
+
 基于字典分析
 
         字典分析运用了有标记词汇组成的字典，使用词法分析器将输入文本转化为单词序列，将每一个新的单词  
@@ -33,13 +34,21 @@
 ## 工具总结
 
 ### 开源工具包
+
 python机器学习库：  
-    &#8195;&#8195;scikit-learn：机器学习库。  
+    scikit-learn：机器学习库。 
+
 nlp处理工具：  
-    &#8195;&#8195;NLTK:用户python 自然语言处理库。  
-    &#8195;&#8195;Ansj是由孙健（ansjsun）开源的一个中文分词器，为ICTLAS的Java版本，也采用了Bigram + HMM分词模型  
-    &#8195;&#8195;Jieba是由fxsjy大神开源的一款中文分词工具，一款属于工业界的分词工具——模型易用简单、代码清晰可读，推荐有志学习NLP或Python的读一下源码。与采用分词模型Bigram + HMM 的ICTCLAS 相类似，Jieba采用的是Unigram + HMM。Unigram假设每个词相互独立，则分词组合的联合概率：  
-    &#8195;&#8195;LTP是哈工大开源的一套中文语言处理系统，涵盖了基本功能：分词、词性标注、命名实体识别、依存句法分析、语义角色标注、语义依存分析等。     
-    &#8195;&#8195;CoreNLP是由斯坦福大学开源的一套Java NLP工具，提供诸如：词性标注（part-of-speech (POS) tagger）、命名实体识别（named entity recognizer (NER)）、情感分析（sentiment analysis）等功能。  
-    &#8195;&#8195;gensim：开源的第三方python工具包，用于从原始的非结构化文本中，无监督的学习到文本隐层的主题向量表达。支持TF-IDF、LSA、LDA和word2vec在内的多种主题模型算法，支持流式训练，并提供了诸如相似度计算，信息检索等一系列常用任务的api接口。  
+
+    nltk：python 自然语言处理库。 
+
+    Ansj是由孙健（ansjsun）开源的一个中文分词器，为ICTLAS的Java版本，也采用了Bigram + HMM分词模型  
+
+    Jieba是由fxsjy大神开源的一款中文分词工具，一款属于工业界的分词工具——模型易用简单、代码清晰可读，推荐有志学习NLP或Python的读一下源码。与采用分词模型Bigram + HMM 的ICTCLAS 相类似，Jieba采用的是Unigram + HMM。Unigram假设每个词相互独立，则分词组合的联合概率： 
+
+    LTP是哈工大开源的一套中文语言处理系统，涵盖了基本功能：分词、词性标注、命名实体识别、依存句法分析、语义角色标注、语义依存分析等。  
+
+    CoreNLP是由斯坦福大学开源的一套Java NLP工具，提供诸如：词性标注（part-of-speech (POS) tagger）、命名实体识别（named entity recognizer (NER)）、情感分析（sentiment analysis）等功能。 
+
+    gensim：开源的第三方python工具包，用于从原始的非结构化文本中，无监督的学习到文本隐层的主题向量表达。支持TF-IDF、LSA、LDA和word2vec在内的多种主题模型算法，支持流式训练，并提供了诸如相似度计算，信息检索等一系列常用任务的api接口。  
 ###  API 接口
