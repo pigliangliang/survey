@@ -28,12 +28,12 @@
         2）常用方法：tf-idf，互信息等
         3）常用工具：word2vector ，doc2vec
         训练方法
-        1）机器学习算法
-        2）神经网络
+        1）机器学习算法：贝叶斯，svm，xgboost，lr
+        2）神经网络，CNN，lstm
         评价方法
         召回率：反应被判定为正例的样本占全部正例样本的比例。
         准确率：反映了分类器统对整个样本的判定能力——能将正的判定为正，负的判定为负 。
-
+        一般的，传统使用词袋模型+支持向量机方式，需要经历特征选择等阶段，它偏向于使用工程特征或者极性转移规则来提高 准确率。而作为新型情感分析技术的深度神经网络可以省去         特征工程这一环节,可以端到端训练而几乎不用人工参与。
 
 
 
@@ -51,7 +51,9 @@
        机器学习方式：传统机器学习和神经网络方式。
          
 2、论文：Apply Word Vectors for Sentiment Analysis of APP Reviews   
-   The 2016 3rd International Conference on Systems and Informatics (ICSAI 2016)
+    The 2016 3rd International Conference on Systems and Informatics (ICSAI 2016)
+
+3、论文：Chinese Micro-Blog Sentiment Analysis Based on Multi-Channels Convolutional Neural Networks
    	  
 ## 工具总结
 
@@ -75,6 +77,10 @@ nlp处理工具：
 
     gensim：开源的第三方python工具包，用于从原始的非结构化文本中，无监督的学习到文本隐层的主题向量表达。支持TF-IDF、LSA、LDA和word2vec在内的多种主题模型算法，支持流式训练，并提供了诸如相似度计算，信息检索等一系列常用任务的api接口。
 
+特征提取
+    词袋模型
+    tf-idf方式
+    一般先使用sklearn库中提供的词袋函数，结合tf-idf处理，提升分类算法性能。
 文本向量化方法
 
     词袋方法 ：首先构造词典，将文本中对应位置出现的词语标记为该词语在文本中的出现的频次。可以使用sklearn库中的方法词袋和tf-idf方法
