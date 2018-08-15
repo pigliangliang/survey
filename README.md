@@ -21,7 +21,8 @@
 混合分析方式
 ## 文献综述
 1、2017年的survey  
-    论文主要是阐述在情感分析方面的基本方法的survey。
+    论文主要是阐述在情感分析方面的基本方法的survey。  
+    
     Published in: 2017 International Conference on I-SMAC (IoT in Social, Mobile, Analytics and Cloud) (I-SMAC)
     文档位置：document目录。
     论文主要内容：
