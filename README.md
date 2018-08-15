@@ -24,10 +24,12 @@
     论文主要是阐述在情感分析方面的基本方法的survey。  
      Published in: 2017 International Conference on I-SMAC (IoT in Social, Mobile, Analytics and Cloud) (I-SMAC)
      文档位置：document目录。
+
     论文主要内容：
        特征提取方式：论文是关于英文的情感分析，提取方式可以参考。  
        分类方法：词典和机器学习方式。  
-       机器学习方式：传统机器学习和神经网络方式。  
+       机器学习方式：传统机器学习和神经网络方式。
+         
 2、论文：Apply Word Vectors for Sentiment Analysis of APP Reviews   
    The 2016 3rd International Conference on Systems and Informatics (ICSAI 2016)
    	  
@@ -36,6 +38,7 @@
 ### 开源工具包
 
 python机器学习库：  
+
     scikit-learn：机器学习库。 
 
 nlp处理工具：  
