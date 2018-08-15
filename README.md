@@ -27,7 +27,7 @@
     &#8195;论文主要内容：
        &#8195; 特征提取方式：论文是关于英文的情感分析，提取方式可以参考。  
 	&#8195;分类方法：词典和机器学习方式。  
-        &#8195; 机器学习方式：传统机器学习和神经网络方式。
+        &#8195; 机器学习方式：传统机器学习和神经网络方式。  
 2、论文：Apply Word Vectors for Sentiment Analysis of APP Reviews   
    The 2016 3rd International Conference on Systems and Informatics (ICSAI 2016)
    	
