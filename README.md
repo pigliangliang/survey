@@ -50,10 +50,31 @@
        分类方法：词典和机器学习方式。  
        机器学习方式：传统机器学习和神经网络方式。
          
-2、论文：Apply Word Vectors for Sentiment Analysis of APP Reviews   
+2、论文：Apply Word Vectors for Sentiment Analysis of APP Reviews
     The 2016 3rd International Conference on Systems and Informatics (ICSAI 2016)
 
-3、论文：Chinese Micro-Blog Sentiment Analysis Based on Multi-Channels Convolutional Neural Networks
+3、论文：Chinese Micro-Blog Sentiment Analysis Based on Multi-Channels Convolutional Neural Networ
+
+    一般的在机器学习方法中主要使用词向量的形式输入到神经网络或者使用机器学习方法进行训练，得到相应的分类结果，在该论文中，为了能够提取到文本的隐含信息将词向量，词的位置向量，词性向量进行多种方式的组合，论文中采用四中方式组合。输入CNN网络，包含输入层，卷积，池化，合并，隐藏，输出层。
+
+    输入层：四种拼接向量
+    V1 =w⊕tag⊕position
+    V2=w⊕tag
+    V3 =w⊕position
+    V4 =tag⊕position
+    
+    卷积层：cj =relu(W·Vij:i+h-1 +b)
+
+    池化层：C^j=(^c1 ,^c2 ,...,c^d)
+
+    合并层：C=C1 ⊕C2 ⊕...⊕Cn 
+
+    隐藏层：R = rel u ( W h C^ h + b h )  为了提升特征表达能力，进行非线性激励。
+    
+    输出层：softmax ：loss=-1∑ylny^+λ‖θ‖2 使用交叉熵函数调整优化模型参数。
+
+
+
    	  
 ## 工具总结
 
