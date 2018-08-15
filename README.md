@@ -55,6 +55,12 @@
 
     The 2016 3rd International Conference on Systems and Informatics (ICSAI 2016)
 
+    论文主要阐述使用google词向量工具进行情感词典的构建
+    
+    首先是从语料库中选取种子情感词，选取依据是频率
+    其次使用word2vec工具向量化种子，依据余弦相似性定理扩充情感词典。
+    最后输入贝叶斯分类器训练模型，进行文本分类
+
 3、论文：Chinese Micro-Blog Sentiment Analysis Based on Multi-Channels Convolutional Neural Networ
 
     一般的在机器学习方法中主要使用词向量的形式输入到神经网络或者使用机器学习方法进行训练，得到相应的分类结果，在该论文中，为了能够提取到文本的隐含信息将词向量，词的位置向量，词性向量进行多种方式的组合，论文中采用四中方式组合。输入CNN网络，包含输入层，卷积，池化，合并，隐藏，输出层。
