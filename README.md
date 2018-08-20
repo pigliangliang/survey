@@ -29,8 +29,8 @@
         2）常用方法：tf-idf，互信息等
         3）常用工具：word2vector ，doc2vec
         训练方法
-        1）机器学习算法：贝叶斯，svm，xgboost，lr
-        2）神经网络，CNN，lstm
+        1）机器学习算法：贝叶斯，svm，xgboost，lr等。
+        2）神经网络，CNN，lstm，TextCNN，fastText等。
         评价方法
         召回率：反应被判定为正例的样本占全部正例样本的比例。
         准确率：反映了分类器统对整个样本的判定能力——能将正的判定为正，负的判定为负 。
