@@ -20,7 +20,7 @@ print('/'.join(keywords2))
 
 
 
-#LDA主题建模
+#NLP主题建模
 
 from gensim.corpora import Dictionary
 from gensim import models,similarities
@@ -61,21 +61,22 @@ for index,topic in lda.print_topics(num_topics=5):
 
 
 
-
+'''
+这部分代码有问题，预期实现的功能是实现文档相似度分析
 #参考文档：http://www.52nlp.cn/如何计算两个文档的相似度二
 #给定text，测试其匹配的主题
 text = '手机 不错 性价比 高'
-text_bow = dictionary.doc2bow([t for t in text ])
+text_bow = [dictionary.doc2bow([t for t in text ])]
 #print(text_bow)
-tfidf = models.TfidfModel(te)[te]#转化为tfidf模型和向量形式
+tfidf = models.TfidfModel(te)#转化为tfidf模型和向量形式
 #使用训练好的lsi模型将其映射到二维的topic空间
-text_tfidf = lsi[tfidf]
+#text_tfidf = lsi[tfidf]
 #计算其和index中doc的余弦相似度了
-index = similarities.MatrixSimilarity(lsi[te])
-sims = index[text_tfidf]
+index = similarities.MatrixSimilarity(tfidf[te])
+sims = index[tfidf[text_bow]]
 print(sims)
 
-
+'''
 
 
 #查询某个文档属于哪个主题,对比lsi模型
