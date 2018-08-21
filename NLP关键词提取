@@ -1,0 +1,12 @@
+# 关键词提取
+## TF-IDF
+   
+    sklearn，gensim均有该模型
+   
+## TextRank
+    
+    结巴分词analysis模块下
+    
+## 主题模型
+### LSA/LSI
+### LDA 

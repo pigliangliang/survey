@@ -1,0 +1,37 @@
+# 文档聚类
+文档聚类可以看做是文档相似度分析，作为一种无监督的机器学习方法，聚类由于不需要训练过程，以及不需要预先对文档手工标注类别，因此具有一定的灵活性和较高的自动化处理能力
+## 特征提取
+在主题模型，不如LDA或LSI基础上进行进行，即进行删除停用词，提取词袋并进行TFIDF后在使用
+LDA算法转化成若干主题概率分布然后使用聚类算分析。
+# 衡量指标
+## 轮廓系数
+聚类中还有一种评估方法，叫轮廓系数。轮廓系数综合了聚类后的两项因素：内聚度和分离度。内聚度就指一个样本在簇内的不相似度，而分离度就指一个样本在簇间的不相似度。在scikit-learn中，同样也提供了直接计算轮廓系数的方法。
+
+    from sklearn.metrics import silhouette_score
+# 聚类算法
+    
+    k-means,dbscan
+    
+# 文档相似度
+## simhash
+主要的通过通过对比两个文档的hash值，进而判断文档的相似程度。
+具体过程
+
+    将文档分词 抽取关键词和权重对（key,weight）形式
+    计算hash值，并将hash和weight相乘，即hash加权
+    将多个加权后的结果相加，并转换成hash值。
+#
+    
+    simhash库安装 pip install simhash
+    
+ ##  余弦距离
+ 夹角越小，余弦值越接近于1，它们的方向更加吻合，则越相似。可见余弦距离在0和1之间且约接近1说明越两者越相似。
+ gensim库封装实现了针对稀疏矩阵计算余弦距离的类，直接调用即可。由于需要按照score的倒序排列，所以使用key参数。
+ 
+     index = similarities.SparseMatrixSimilarity(tfidf[corpus], num_features=len(dictionary.keys()))
+     sim = index[tfidf[test_news_vec]]
+     for index, score in sorted(enumerate(sim), key=lambda item: -item[1])[:6]:
+ 	    print   "index:%d similarities:%f content:%s" % (index, score, content[index])
+ 	 参考代码code文件
+ 	 
+## 主题模型
