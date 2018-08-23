@@ -54,8 +54,8 @@ d
  ，d
 d
  是embedding的维度。
- #
-    模型的第二层是双向LSTM层，自动提取句子特征。将一个句子的各个字的char embedding序列 (x1,x2,...,xn)
+ 
+模型的第二层是双向LSTM层，自动提取句子特征。将一个句子的各个字的char embedding序列 (x1,x2,...,xn)
 (
 x
 1
