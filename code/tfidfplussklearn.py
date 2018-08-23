@@ -1,6 +1,9 @@
 #author_by zhuxiaoliang
 #2018-08-19 下午4:11
 
+#sklearn 库 基于tfidf文本分类
+
+
 #oding:utf-8
 import codecs
 import json

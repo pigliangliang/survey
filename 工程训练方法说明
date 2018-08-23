@@ -1,0 +1,17 @@
+# 文本分类当前实践的方法
+# 参考code
+在code中目前实践的有
+
+    基于传统机器学习方式，比如lr，svm等。基于sklearn库。
+    文本向量实现方式
+    方式一 文本向量使用sklearn库词袋和词频特征的向量函数的方式countvector/tfidfvector
+    方式二 使用gensim库中word2vec方式实现的词向量，基于词向量加和求平均的方式实现文本向量
+
+#
+    基于神经网络的实现方式，比如CNN，TextCNN，LSTM等。基于TensorFlow或者sklearn库。
+    文本向量是实现方式
+    方式一 基于gensim库实现词向量
+    方式二 基于TensorFlow 实现
+#
+    fasttext方式实现。基于fastText库有监督学习，直接将文本传到方法中，方法内部仍然基于词向量的方式构建。
+    参考代码code文件
