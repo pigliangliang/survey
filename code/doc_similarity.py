@@ -61,8 +61,10 @@ def gensim_sim(content,test_text):
     #lda
     lda = models.LdaModel(corpus_tfidf,id2word=dictionary,num_topics=5)
     #输出5个主题
-    for l in lda.print_topics():
-        print(lda.print_topics())
+    #for l in lda.print_topics():
+    #print(lda.print_topics())
+    for _,l in lda.print_topics():
+        print(l)
     corpus_lda = lda[corpus_tfidf]
     #输出第一个文档对应的主题概率分布
     print(corpus_lda[0])

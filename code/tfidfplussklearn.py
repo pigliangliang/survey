@@ -243,12 +243,12 @@ class Preprocessor:
 
 if __name__ == '__main__':
     processor = Preprocessor()
-    voc  = processor.process_data()
+    voc  = processor.process_data()#这个voc需要写到一个文件中
     #print(voc)
     #import json
     #with open('modelvoc.json','w') as f:
 
-     #   json.dump(voc,f)
+     #json.dump(voc,f)
     #import pickle
     #with open('modelvec.txt','w') as f :
     #pickle.dump(voc,f)

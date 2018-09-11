@@ -4,13 +4,45 @@
 from  gensim.models import Word2Vec
 from gensim.models import word2vec
 
-
+import jieba
 
 #两种形式的文本输入都是可以的
 #sentences = ['我 爱你','你  很好']
-sentences = [['first', 'sentence'], ['second', 'sentence']]
-model = Word2Vec(sentences,min_count=1)
-print(model['first'])
+#sentences = [['first', 'sentence'], ['second', 'sentence']]
+
+def load_stopwords(path='../data/cnews/stopwords.txt'):
+    stopwords = [line.strip() for line in open(path, 'r').readlines()]
+    return stopwords
+def word_vec():
+    contents = []
+    with open('../NER/resource/source.txt','r') as f:
+        for line in f.readlines():
+
+            local = jieba.lcut(line)
+            contents.append([l for l in local if l not in load_stopwords()])
+
+
+    #model = Word2Vec(contents,min_count=2)
+    #model.save('../data/cnews/word2vec.pkl')
+
+
+
+if __name__ =="__main__":
+    model = Word2Vec.load('../data/cnews/word2vec.pkl')
+    print(model.most_similar('犯罪'))
+    print(model['罪'])
+
+
+
+"""
+文本中内容形式是字符串形式写入的，并且有换行符\n
+content = open('','r')
+使用model = Word2Vec(LineSentence(content))
+
+
+
+
+"""
 
 
 

@@ -85,7 +85,7 @@ def create_dictionaries(model=None,
                 data.append(new_txt)
             return data # word=>index
         combined=parse_dataset(combined)
-        combined= sequence.pad_sequences(combined, maxlen=maxlen)#每个句子所含词语对应的索引，所以句子中含有频数小于10的词语，索引为0
+        combined= sequence.pad_sequences(combined, maxlen=maxlen)#每个句子所含词语对应的索引，所有句子中含有频数小于10的词语，索引为0
         return w2indx, w2vec,combined
     else:
         pass
@@ -109,7 +109,7 @@ def word2vec_train(combined):
 
 def get_data(index_dict,word_vectors,combined,y):
 
-    n_symbols = len(index_dict) + 1  # 所有单词的索引数，频数小于10的词语索引为0，所以加1
+    n_symbols = len(index_dict) + 1  # 所有单词的索引数从1开始，频数小于10的词语索引为设定为0，暂未加入到索引词典中，所以加1
     embedding_weights = np.zeros((n_symbols, vocab_dim)) # 初始化 索引为0的词语，词向量全为0
     for word, index in index_dict.items(): # 从索引为1的词语开始，对每个词语对应其词向量
         embedding_weights[index, :] = word_vectors[word]

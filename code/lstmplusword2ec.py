@@ -64,6 +64,7 @@ def create_dictionaries(model=None,conbined=None):
             return data
 
         conbined = parse_dataset(conbined)
+        #输入要求长度一致，所以句子要截取同样长度，不足最大长度补零
         conbined = sequence.pad_sequences(conbined,maxlen=100)
         return w2index,w2vec,conbined
     else:
@@ -78,7 +79,7 @@ def word2vec_train(document):
     model.train(document,total_examples=15828,epochs=1)
     model.save('../data/lstm_word2v_model.pkl')
     """
-    #训练方式二
+    #训练方式二读取文本数据
     model = Word2Vec(LineSentence(document),size=100,window=5,min_count=5)
     model.save('../data/lstm_word2v_model.pkl')
     """

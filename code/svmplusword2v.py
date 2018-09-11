@@ -120,13 +120,33 @@ def svm_predict(string):
 
 if __name__ == '__main__':
     #训练
-    '''
+
     x_train,x_test= loadfile()
     print(len(x_train),len(x_test))
     get_train_vecs(x_train,x_test)
     train_vecs,y_train,test_vecs,y_test = get_data()
+
+    from sklearn.linear_model import LogisticRegression
+    from sklearn.ensemble import RandomForestClassifier
+    from sklearn.svm import LinearSVC
+    from sklearn.model_selection import cross_val_score
+    from sklearn.naive_bayes import MultinomialNB
+
+    models = [
+        RandomForestClassifier(n_estimators=200, max_depth=3, random_state=0),
+        LinearSVC(),
+        MultinomialNB(),
+        LogisticRegression(random_state=0),
+    ]
+    CV = 5
+    for model in models:
+        #model_name = model.__class__.__name__
+        accuracies = cross_val_score(model, train_vecs, y_train, scoring='accuracy', cv=CV)
+    #
+    """
+    
     svm_train(train_vecs,y_train,test_vecs,y_test)
-    '''
+
     text = '好好好'
-    svm_predict(text)
+    svm_predict(text)"""
 
